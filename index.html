@@ -1,92 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biome Trust - Communications Reports</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biome Trust</title>
 <style>
-  :root { --green-dark: #1e3a1f; --cream: #faf7f2; --tan: #c8a97e; --text-light: #6b6b6b; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: var(--cream);
-    color: var(--green-dark);
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-  }
-  .wrap { max-width: 640px; width: 100%; text-align: center; }
-  .eyebrow {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-light);
-    margin-bottom: 16px;
-  }
-  h1 { font-size: 40px; font-weight: 600; margin-bottom: 12px; letter-spacing: 0.5px; }
-  p { color: var(--text-light); margin-bottom: 32px; font-size: 15px; }
-  .reports { display: grid; gap: 14px; }
-  .report-link {
-    display: block;
-    background: white;
-    border: 1px solid #e8e0d0;
-    border-radius: 12px;
-    padding: 22px 28px;
-    text-decoration: none;
-    color: inherit;
-    text-align: left;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .report-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
-  }
-  .report-link.disabled { opacity: 0.55; pointer-events: none; }
-  .report-period { font-size: 18px; font-weight: 600; }
-  .report-meta { font-size: 13px; color: var(--text-light); margin-top: 4px; }
-  .report-tag {
-    display: inline-block;
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 999px;
-    margin-left: 8px;
-    vertical-align: middle;
-  }
-  .report-tag.latest { background: #e8f0e3; color: #2d5a2e; }
-  .report-tag.pending { background: #efe9dc; color: var(--text-light); }
-  footer { margin-top: 40px; font-size: 12px; color: var(--text-light); }
-</style>
-</head>
-<body>
-<div class="wrap">
-  <img src="biome-logo.png" alt="Biome Trust" style="width:138px;height:auto;margin:0 auto 20px;display:block;">
-  <h1>Communications Reports</h1>
-  <p>Quarterly Digital Reach Summaries — covering website, email, Instagram, LinkedIn, Facebook and X.</p>
-
-  <div class="reports">
-    <a class="report-link" href="May-Jul-2026/">
-      <div class="report-period">1 May – 31 July 2026 <span class="report-tag latest">Latest</span></div>
-      <div class="report-meta">Quarterly digital reach summary</div>
-    </a>
-    <a class="report-link" href="Jan-Apr-2026/">
-      <div class="report-period">Jan 24 – Apr 24, 2026</div>
-      <div class="report-meta">90-day digital reach summary</div>
-    </a>
-    <span class="report-link disabled">
-      <div class="report-period">Nov 2025 – Jan 2026 <span class="report-tag pending">Not available</span></div>
-      <div class="report-meta">Previous period</div>
-    </span>
-  </div>
-
-  <footer>Updated quarterly · biometrust.earth</footer>
-</div>
-</body>
-</html>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;background:#faf7f2;color:#1e3a1f;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.gate{max-width:360px;width:100%;text-align:center}
+.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#6b6b6b;margin-bottom:14px}
+h1{font-size:26px;font-weight:600;margin-bottom:8px;letter-spacing:.3px}
+p{color:#6b6b6b;font-size:14px;margin-bottom:24px;line-height:1.5}
+input{width:100%;padding:14px 16px;border:1px solid #e8e0d0;border-radius:10px;font-size:15px;font-family:inherit;text-align:center;background:#fff;color:#1e3a1f}
+input:focus{outline:none;border-color:#2d5a2e}
+button{width:100%;margin-top:12px;padding:14px;border:none;border-radius:10px;background:#2d5a2e;color:#fff;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer}
+button:hover{background:#1e3a1f}
+.err{color:#c0392b;font-size:13px;margin-top:12px;min-height:18px}
+</style></head><body>
+<div class="gate">
+<div class="eyebrow">Biome Trust</div><h1>Communications Reports</h1>
+<p>This report is private. Please enter the password to continue.</p>
+<form id="f"><input id="pw" type="password" placeholder="Password" autocomplete="current-password" autofocus>
+<button type="submit">View report</button><div class="err" id="err"></div></form></div>
+<script>
+var SALT="GHSTTsmDsdLMFv1ODVB/hg==",IV="zuswjzrv8TYxLGpb",CT="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",ITER=200000,KEY="_bt_unlock";
+function b64d(s){return Uint8Array.from(atob(s),function(c){return c.charCodeAt(0);});}
+async function derive(pw){var km=await crypto.subtle.importKey("raw",new TextEncoder().encode(pw),"PBKDF2",false,["deriveKey"]);
+return crypto.subtle.deriveKey({name:"PBKDF2",salt:b64d(SALT),iterations:ITER,hash:"SHA-256"},km,{name:"AES-GCM",length:256},false,["decrypt"]);}
+async function decrypt(pw){var key=await derive(pw);var pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64d(IV)},key,b64d(CT));return new TextDecoder().decode(pt);}
+async function unlock(pw,remember){var html;try{html=await decrypt(pw);}catch(e){return false;}if(remember){try{sessionStorage.setItem(KEY,pw);}catch(e){}}document.open();document.write(html);document.close();return true;}
+document.getElementById("f").addEventListener("submit",async function(e){e.preventDefault();var ok=await unlock(document.getElementById("pw").value,true);if(!ok){document.getElementById("err").textContent="Incorrect password. Please try again.";document.getElementById("pw").value="";}});
+(async function(){try{var pw=sessionStorage.getItem(KEY);if(pw){await unlock(pw,false);}}catch(e){}})();
+</script></body></html>
