@@ -29,7 +29,12 @@
     color: var(--text-light);
     margin-bottom: 16px;
   }
-  h1 { font-size: 30px; font-weight: 600; margin-bottom: 32px; letter-spacing: 0.3px; white-space: nowrap; }
+  @font-face {
+    font-family: 'Tiempos Headline';
+    src: url('https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/623a84f170d74767f7d95068/assets/16a911cf-7409-4ec3-af0e-edba3be10075/font.woff2') format('woff2');
+    font-weight: 300 900; font-style: normal; font-display: swap;
+  }
+  h1 { font-family: 'Tiempos Headline', Georgia, 'Times New Roman', serif; font-size: 34px; font-weight: 500; margin-bottom: 32px; letter-spacing: 0; white-space: nowrap; }
   @media (max-width: 560px){ h1 { font-size: 24px; white-space: normal; } }
   p { color: var(--text-light); margin-bottom: 32px; font-size: 15px; }
   .reports { display: grid; gap: 14px; }
@@ -41,7 +46,7 @@
     padding: 22px 28px;
     text-decoration: none;
     color: inherit;
-    text-align: left;
+    text-align: center;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
   .report-link:hover {
@@ -50,6 +55,7 @@
   }
   .report-link.disabled { opacity: 0.55; pointer-events: none; }
   .report-period { font-size: 18px; font-weight: 600; }
+  .report-q { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); margin-bottom: 6px; }
   .report-meta { font-size: 13px; color: var(--text-light); margin-top: 4px; }
   .report-tag {
     display: inline-block;
@@ -73,16 +79,19 @@
 
   <div class="reports">
     <a class="report-link" href="Jul-Sep-2026/">
+      <div class="report-q">Q3</div>
       <div class="report-period">Jul – Sep 2026 <span class="report-tag latest">Latest</span></div>
-      <div class="report-meta">Quarterly digital reach summary</div>
+      <div class="report-meta">Quarterly impact &amp; reach summary</div>
     </a>
     <a class="report-link" href="May-Jul-2026/">
+      <div class="report-q">Q2</div>
       <div class="report-period">Apr – Jun 2026</div>
-      <div class="report-meta">Quarterly digital reach summary</div>
+      <div class="report-meta">Quarterly impact &amp; reach summary</div>
     </a>
     <a class="report-link" href="Jan-Apr-2026/">
+      <div class="report-q">Q1</div>
       <div class="report-period">Jan – Mar 2026</div>
-      <div class="report-meta">Quarterly digital reach summary</div>
+      <div class="report-meta">Quarterly impact &amp; reach summary</div>
     </a>
     <span class="report-link disabled">
       <div class="report-period">Nov 2025 – Jan 2026 <span class="report-tag pending">Not available</span></div>
